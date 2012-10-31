@@ -10,20 +10,6 @@ License:
 License URI: 
 */
 
-
-function dev_test() {
-
-	//include_once ABSPATH . 'wp-admin/includes/plugin-install.php'; //for plugins_api..
-
-
-	//$api = plugins_api('plugin_information', array('slug' => 'easy-digital-downloads', 'fields' => array('sections' => false) ) );
-
-	//echo '<pre>'; print_r( $api ); echo '</pre>';
-
-}
-add_action( 'admin_init', 'dev_test' );
-
-
 function pw_plugin_action_links( $action_links, $plugin ) {
 
 	$status = install_plugin_install_status( $plugin );
