@@ -174,3 +174,11 @@ function pw_install_plugin_other_versions_information() {
 	exit;
 }
 add_action('install_plugins_pre_plugin-versions', 'pw_install_plugin_other_versions_information');
+
+
+
+function pw_add_other_versions_tab( $tabs ) {
+	$tabs['plugin-versions'] = __( 'Other Versions', 'wp_ov' );
+	return $tabs; 
+}
+add_filter( 'install_plugins_tabs', 'pw_add_other_versions_tab' );
